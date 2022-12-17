@@ -1,5 +1,6 @@
 package com.decafandmac.kafka.producer
 
+import com.decafandmac.kafka.partitioner.CustomPartitioner
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.clients.producer.ProducerRecord
@@ -18,7 +19,7 @@ class CustomKafkaTemplate<K, V> {
         configs[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.qualifiedName
 //        configs[ProducerConfig.ACKS_CONFIG] = "0"
 
-//        if(customPartitioner == true) configs[ProducerConfig.PARTITIONER_CLASS_CONFIG] = CustomPartitioner::class.qualifiedName
+        if(customPartitioner == true) configs[ProducerConfig.PARTITIONER_CLASS_CONFIG] = CustomPartitioner::class.qualifiedName
 
         val producer = KafkaProducer<K?, V>(configs)
         val record = ProducerRecord<K?, V>(topic, key, value)
