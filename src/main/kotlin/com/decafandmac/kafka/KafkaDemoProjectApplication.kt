@@ -1,6 +1,9 @@
 package com.decafandmac.kafka
 
-import com.decafandmac.kafka.producer.CustomKafkaTemplate
+import com.decafandmac.kafka.consumer.ASyncCommitConsumer
+import com.decafandmac.kafka.consumer.RebalanceConsumer
+import com.decafandmac.kafka.consumer.SimpleConsumer
+import com.decafandmac.kafka.producer.CustomProducerTemplate
 import com.decafandmac.kafka.producer.SimpleProducer
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -11,7 +14,14 @@ class KafkaDemoProjectApplication
 fun main(args: Array<String>) {
 	runApplication<KafkaDemoProjectApplication>(*args)
 
-	val simpleProducer = SimpleProducer("test", CustomKafkaTemplate())
+//	val simpleProducer = SimpleProducer("test", CustomProducerTemplate())
+//
+//	simpleProducer.send("TestValue2")
 
-	simpleProducer.send("TestValue")
+//	val simpleConsumer = SimpleConsumer()
+//	simpleConsumer("test")
+//	val aSyncCommitConsumer = ASyncCommitConsumer()
+//	aSyncCommitConsumer("test")
+	val rebalanceConsumer = RebalanceConsumer()
+	rebalanceConsumer("test")
 }
