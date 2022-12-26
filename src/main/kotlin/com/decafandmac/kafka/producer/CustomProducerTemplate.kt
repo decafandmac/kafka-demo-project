@@ -8,8 +8,8 @@ import org.apache.kafka.common.serialization.StringSerializer
 import org.slf4j.LoggerFactory
 import java.util.*
 
-class CustomKafkaTemplate<K, V> {
-    private val logger = LoggerFactory.getLogger(CustomKafkaTemplate::class.java)
+class CustomProducerTemplate<K, V> {
+    private val logger = LoggerFactory.getLogger(CustomProducerTemplate::class.java)
     private val bootstrapServer = "localhost:9092"
 
     fun send(topic: String, partitionNo: Int? = null, key: K? = null, value: V, customPartitioner: Boolean? = false) {
