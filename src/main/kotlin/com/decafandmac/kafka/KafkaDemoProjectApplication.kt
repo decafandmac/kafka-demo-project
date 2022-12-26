@@ -1,6 +1,7 @@
 package com.decafandmac.kafka
 
 import com.decafandmac.kafka.consumer.ASyncCommitConsumer
+import com.decafandmac.kafka.consumer.RebalanceConsumer
 import com.decafandmac.kafka.consumer.SimpleConsumer
 import com.decafandmac.kafka.producer.CustomProducerTemplate
 import com.decafandmac.kafka.producer.SimpleProducer
@@ -19,6 +20,8 @@ fun main(args: Array<String>) {
 
 //	val simpleConsumer = SimpleConsumer()
 //	simpleConsumer("test")
-	val aSyncCommitConsumer = ASyncCommitConsumer()
-	aSyncCommitConsumer("test")
+//	val aSyncCommitConsumer = ASyncCommitConsumer()
+//	aSyncCommitConsumer("test")
+	val rebalanceConsumer = RebalanceConsumer()
+	rebalanceConsumer("test")
 }
