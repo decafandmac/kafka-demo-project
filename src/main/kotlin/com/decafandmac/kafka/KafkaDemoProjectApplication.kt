@@ -25,6 +25,8 @@ fun main(args: Array<String>) {
 //	aSyncCommitConsumer("test")
 //	val rebalanceConsumer = RebalanceConsumer()
 //	rebalanceConsumer("test")
-	val streamsFilter = StreamsFilter()
-	streamsFilter()
+//	val streamsFilter = StreamsFilter()
+//	streamsFilter()
+	val kStreamJoinKTable = KStreamJoinKTable()
+	kStreamJoinKTable()
 }
