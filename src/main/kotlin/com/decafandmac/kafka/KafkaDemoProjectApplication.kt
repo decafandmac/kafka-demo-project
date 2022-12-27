@@ -1,10 +1,6 @@
 package com.decafandmac.kafka
 
-import com.decafandmac.kafka.consumer.ASyncCommitConsumer
-import com.decafandmac.kafka.consumer.RebalanceConsumer
-import com.decafandmac.kafka.consumer.SimpleConsumer
-import com.decafandmac.kafka.producer.CustomProducerTemplate
-import com.decafandmac.kafka.producer.SimpleProducer
+import com.decafandmac.kafka.join.KStreamJoinKTable
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
@@ -22,6 +18,10 @@ fun main(args: Array<String>) {
 //	simpleConsumer("test")
 //	val aSyncCommitConsumer = ASyncCommitConsumer()
 //	aSyncCommitConsumer("test")
-	val rebalanceConsumer = RebalanceConsumer()
-	rebalanceConsumer("test")
+//	val rebalanceConsumer = RebalanceConsumer()
+//	rebalanceConsumer("test")
+//	val streamsFilter = StreamsFilter()
+//	streamsFilter()
+	val kStreamJoinKTable = KStreamJoinKTable()
+	kStreamJoinKTable()
 }
