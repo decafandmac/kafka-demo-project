@@ -1,11 +1,6 @@
 package com.decafandmac.kafka
 
-import com.decafandmac.kafka.consumer.ASyncCommitConsumer
-import com.decafandmac.kafka.consumer.RebalanceConsumer
-import com.decafandmac.kafka.consumer.SimpleConsumer
-import com.decafandmac.kafka.filter.StreamsFilter
-import com.decafandmac.kafka.producer.CustomProducerTemplate
-import com.decafandmac.kafka.producer.SimpleProducer
+import com.decafandmac.kafka.join.KStreamJoinKTable
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 

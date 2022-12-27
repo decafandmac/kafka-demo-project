@@ -1,4 +1,4 @@
-package com.decafandmac.kafka
+package com.decafandmac.kafka.join
 
 import org.apache.kafka.common.serialization.Serdes
 import org.apache.kafka.streams.KafkaStreams
