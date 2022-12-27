@@ -25,6 +25,9 @@ dependencies {
 	implementation("org.apache.kafka:kafka-clients:2.5.0")
 	// https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams
 	implementation("org.apache.kafka:kafka-streams:2.5.0")
+	// https://mvnrepository.com/artifact/org.apache.kafka/connect-api
+	implementation("org.apache.kafka:connect-api:2.5.0")
+
 
 
 	// https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
